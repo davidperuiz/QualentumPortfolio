@@ -1,95 +1,51 @@
+import { Jost } from "next/font/google";
+import { Roboto } from "next/font/google";
 import Image from "next/image";
 import styles from "./page.module.css";
+import photo from "../img/foto_pc.png"
+
+const jostBold = Jost({
+  weight: "700",
+  subsets: ["latin"]
+});
+
+const jostSemiBold = Jost({
+  weight: "600",
+  subsets: ["latin"]
+});
+
+const roboto = Roboto({
+  weight: "400",
+  subsets: ["latin"],
+})
+
+export const metadata = {
+  title: "David Pérez Ruiz",
+}
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main className={`${styles.main} ${roboto.className}`}>
 
-      <div className={styles.center}>
+      <header className={styles.header}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src={photo}
+          alt="Foto de David trabajando en el ordenador"
+          width={500}
         />
+        <h1 className={`${styles.h1} ${jostBold.className}`}>
+          David Pérez Ruiz,<br/><span>desarrollador front-end</span>
+        </h1>
+      </header>
+
+      <div className={`${styles.slogan} ${jostSemiBold.className}`}>
+        <span>Creatividad</span> en código, diseño con <span>impacto</span>
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <p className={styles.p}>
+        Soluciones para la experiencia de su página web:<br/>
+        proyectos innovadores que fusionan el cuidado del diseño con la calidad de su funcionalidad.
+      </p>
     </main>
   );
 }

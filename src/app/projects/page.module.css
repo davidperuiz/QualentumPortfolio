@@ -1,0 +1,73 @@
+.main {
+  margin-inline: 200px;
+}
+
+.h1 {
+  margin-top: 50px;
+  color: #F28500;
+  border-bottom: 2px solid #F28500;
+}
+
+.p {
+  margin-top: 20px;
+}
+
+.projectList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.projectCard {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  width: 250px;
+  height: 120px;
+  font-size: 18px;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  opacity: 70%;
+  transition: 0.5s;
+}
+
+.projectCard:hover {
+  opacity: 100%;
+  transition: 0.5s;
+}
+
+.projectSarga {
+  background-color: #FFCCCC;
+  color: #2E2E2E;
+}
+
+.projectKaisSa {
+  background-color: #CC0000;
+}
+
+.projectFarmiga {
+  background-color: #66CC66;
+}
+
+.projectVillaverde {
+  background-color: #CC9966;
+  color: #2E2E2E;
+}
+
+.projectCafe {
+  background-color: #663333;
+}
+
+.projectZoey {
+  background-color: #FF3399;
+  color: #2E2E2E;
+}
+
+.projectFurry {
+  background-color: #FFCC66;
+  color: #2E2E2E;
+}
